@@ -5,33 +5,25 @@ package Sort_Methods;
  *
  * @author Pablo A. Domínguez Medina
  */
-public class Nodo {
-    Nodo sig;
+public class Rodo {
+    Rodo sig;
 
     String data;
     String name;
     int prioridad;
-    int tiempo;
     
     
-    
-    public Nodo(String name, int pri, String data, int var){
+    public Rodo(String name, String data, int var){
         this.data=data;
         this.name=name;
-        prioridad=pri;
-        tiempo=var;
         
     }
-
-    public void setTiempo(int tiempo) {
-        this.tiempo = tiempo;
-    }
     
-    public void setSig(Nodo sig) {
+    public void setSig(Rodo sig) {
         this.sig = sig;
     }
 
-    public Nodo getSig() {
+    public Rodo getSig() {
         return sig;
     }
     
@@ -39,6 +31,10 @@ public class Nodo {
         data=dato;
     }
     
+/*    public void eliminate(){
+        inicio=inicio.sig;
+    }
+*/
     @Override
     public String toString(){
         return name +" \033[33m"+data+" \033[31m       "+ prioridad+"\033[37m";
